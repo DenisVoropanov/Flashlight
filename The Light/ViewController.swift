@@ -6,11 +6,16 @@
 //
 
 import UIKit
-var Light:Bool = false
+
+var Light:Bool = true
+
 
 class ViewController: UIViewController {
     @IBOutlet weak var Button: UIButton!
     
+    override var prefersStatusBarHidden: Bool {
+       return true
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         on_off()
