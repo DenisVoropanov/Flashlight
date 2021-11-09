@@ -6,14 +6,24 @@
 //
 
 import UIKit
+var Light:Bool = false
 
 class ViewController: UIViewController {
-
+    @IBOutlet weak var Button: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        on_off()
     }
 
-
+    fileprivate func on_off() {
+        view.backgroundColor = Light ? .white : .black
+    }
+    
+    @IBAction func ButtonTap(_ sender: Any) {
+        Light.toggle()
+        on_off()
+    }
+    
 }
 
